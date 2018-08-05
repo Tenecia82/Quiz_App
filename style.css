@@ -1,0 +1,88 @@
+body{
+    font-family: arial;
+    font-size: 15px;
+    /* line-height: 1.6em; */
+    
+}
+.top{
+    font-size: 26px;
+}
+.begin{
+    font-size: 22px;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    width: 70%;
+    margin: 20px auto;
+    overflow: auto;
+    background-image: url(Images/handprint\ copy.jpg);
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+header{
+    background: #1f88f4;
+    color: #ffffff;
+    padding: 5px 10px;
+    overflow: auto;
+    font-size: 16px;
+}
+
+div, button{
+    margin-bottom: 10px;
+}
+
+.pull-right{
+    font-size: 24px;
+}
+.question{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.choiceList, .correctInfo, .incorrectInfo{
+    font-size: 18px;
+}
+
+.submit, .continue, .start{
+    font-size: 16px;
+    border-radius: 7px;
+    background: yellowgreen;
+    margin-top: 10px;
+}
+
+.quizMessage{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+.correct, .incorrect{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer{
+    background: #1f88f4;
+    color: #ffffff;
+    padding: 5px 10px;
+    overflow: auto;
+}
+
+@media only screen and (max-width:900px){
+    .container{
+        width: 90%;
+    }
+
+}
