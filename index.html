@@ -11,26 +11,29 @@
 </head>
 <body>
  <div class="container">
-     <header>
+     <header role="banner">
          <div class="pull-left">jQuery Quiz</div>
          <div class="pull-right"><i class="far fa-hand-point-right"></i> Hand &amp; Finger Fun Facts</div>
      </header>
-     <main>
+     <main role="main">
          <div class="welcome">
                 <h3 class="welcome top">Hands &amp; Fingers Fun Facts Quiz:</h3><br/> <p class="welcome begin">You use them every day. But do you know a lot about them?</p>
 
             <button class="start">Start</button>
     
-         </div>   
+         </div>
+                     
         <div class="quizContainer">
-        <div class="quizForm">     
+        <div class="quizForm" >     
         <div class="question"></div>
+           
         <ul class="choiceList"></ul>
+
         <button class="submit">Submit</button>
-        </div>
         <div class="quizMessage"></div>
-        
         </div>
+        </div>
+            
 
         <div class="nextContainer">
             
@@ -41,13 +44,12 @@
         <div class="answerInfo"></div>
 
         <button class="continue">Next Question</button>
-         
+                    
         </div>
         <div id="results"></div>
-
      </main>
 
-     <footer>
+     <footer role="contentinfo">
          <div class="pull-left">Total: 5 Questions</div>
      </footer>
  </div> <!-- container -->

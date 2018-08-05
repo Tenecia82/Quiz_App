@@ -74,13 +74,12 @@ function displayCurrentQuestion(i) {
   let choice;
   for (i = 0; i < numChoices; i++) {
     choice = quizData[currentQuestion].answers[i];
-    $('<li><input type="radio" value=' + i + ' name="dynradio" + required />' + choice + '</li>').appendTo(choiceList);
+    $('<li><input type="radio" value=' + i + ' name="dynradio"/>' + choice + '</li>').appendTo(choiceList);
   }
   //Submit Answer
-  $('.submit').on('click', function() {
-    
+  $('.submit').on('click', function(){
     //Error Message 
-    let value = $("input[type='radio']:checked").val();
+    let value = $('input[type="radio"]:checked').val();
 
     if (value == undefined) {
       $('.quizMessage').text('Please select an answer!');
@@ -97,12 +96,9 @@ function displayCurrentQuestion(i) {
 }
 //Display Next Question
 $('.continue').on('click', function (i) {
-
+//Display next question
   currentQuestion++;
-  //Prevent default
-  event.preventDefault();
-
-  
+  //Populate DOM
   let question = quizData[currentQuestion].question;
   let questionClass = $(document).find('.quizForm > .question');
  
