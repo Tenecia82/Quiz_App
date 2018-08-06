@@ -60,8 +60,8 @@ function displayCurrentQuestion(i) {
   console.log('In display current Question');
 
   let question = quizData[currentQuestion].question;
-  let questionClass = $(document).find('.quizForm > .question');
-  let choiceList = $(document).find('.quizForm > .choiceList');
+  let questionClass = $('.quizForm > .question');
+  let choiceList = $('.quizForm > .choiceList');
   let numChoices = quizData[currentQuestion].answers.length;
 
   $(this).find('.quizMessage').hide();
@@ -104,9 +104,9 @@ $('.continue').on('click', function (i) {
   currentQuestion++;
   //Populate DOM
   let question = quizData[currentQuestion].question;
-  let questionClass = $(document).find('.quizForm > .question');
+  let questionClass = $('.quizForm > .question');
  
-  let choiceList = $(document).find('.quizForm > .choiceList');
+  let choiceList = $('.quizForm > .choiceList');
   let numChoices = quizData[currentQuestion].answers.length;
 
   $(questionClass).text(question);
@@ -136,8 +136,8 @@ function process(n){
   if (submitted == quizData[currentQuestion].correctAnswer){
     score++;
     //Correct answer screen
-    $(document).find('.correctInfo').text(quizData[currentQuestion].answerInfo);
-    $('.correctGroup').show()
+    $('.correctInfo').text(quizData[currentQuestion].answerInfo);
+    $('.correctGroup').show();
     $('.nextContainer').show();
     $('.quizContainer').hide();
     $('.incorrectGroup').hide();
@@ -147,7 +147,7 @@ function process(n){
   // if (submitted != quizData[currentQuestion].correctAnswer) {
   else{
     //Incorrect answer screen
-    $(document).find('.incorrectInfo').text(quizData[currentQuestion].answerInfo);
+    $('.incorrectInfo').text(quizData[currentQuestion].answerInfo);
     $('.incorrectGroup').show();
     $('.nextContainer').show();
     $('.quizContainer').hide();
