@@ -74,10 +74,13 @@ function displayCurrentQuestion(i) {
   let choice;
   for (i = 0; i < numChoices; i++) {
     choice = quizData[currentQuestion].answers[i];
-    $('<li><input type="radio" value=' + i + ' name="dynradio"/>' + choice + '</li>').appendTo(choiceList);
+    $('<li><input type="radio" value=' + i + ' name="dynradio" + required />' + choice + '</li>').appendTo(choiceList);
   }
   //Submit Answer
-  $('.submit').on('click', function(){
+  $('.submit').on('click', function(event){
+    event.preventDefault();
+    console.log('sumbitted');
+    
     //Error Message 
     let value = $('input[type="radio"]:checked').val();
 
@@ -96,6 +99,7 @@ function displayCurrentQuestion(i) {
 }
 //Display Next Question
 $('.continue').on('click', function (i) {
+    
 //Display next question
   currentQuestion++;
   //Populate DOM
@@ -163,3 +167,6 @@ function process(n){
 
 //Add event listners
 window.addEventListener('load',quizData,false);
+
+   
+
