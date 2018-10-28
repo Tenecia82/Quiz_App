@@ -57,7 +57,6 @@ function displayCurrentQuestion(i) {
   $('.quizContainer').show();
   $('.quizForm').show();
 
-  console.log('In display current Question');
 
   let question = quizData[currentQuestion].question;
   let questionClass = $('.quizForm > .question');
@@ -74,7 +73,7 @@ function displayCurrentQuestion(i) {
   let choice;
   for (i = 0; i < numChoices; i++) {
     choice = quizData[currentQuestion].answers[i];
-    $('<li><input type="radio" value=' + i + ' name="dynradio" + required />' + choice + '</li>').appendTo(choiceList);
+    $(`<li><input id= "choice${i}" type="radio" value= ${i}name="dynradio"  required /> <label for = "choice${i}"> ${choice} </label>  </li>`).appendTo(choiceList);
   }
   //Submit Answer
   $('.submit').on('click', function(event){
@@ -91,7 +90,6 @@ function displayCurrentQuestion(i) {
   
       $('.quizMessage').hide();
       process(currentQuestion);
-      console.log('processed');
     }
 
   });
@@ -144,7 +142,7 @@ function process(n){
   }
 
   //Incorrect answer display
-  // if (submitted != quizData[currentQuestion].correctAnswer) {
+
   else{
     //Incorrect answer screen
     $('.incorrectInfo').text(quizData[currentQuestion].answerInfo);
