@@ -24,10 +24,12 @@ li{
 
 .pull-left{
     float: left;
+    font-size: 40px;
 }
 
 .pull-right{
     float: right;
+    font-size: 36px;
 }
 
 header{
@@ -36,27 +38,53 @@ header{
     padding: 5px 10px;
     overflow: auto;
     font-size: 20px;
+    font-weight: bolder;
+}
+.welcomeTop{
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.welcomeBegin{
+
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.final {
+    font-size: 50px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.currentScore{
+    font-size: 50px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.retake{
+    font-size: 36px;
+    font-weight: bolder;
 }
 
 div, button{
     margin-bottom: 10px;
 }
 
-.pull-right{
-    font-size: 24px;
-}
 .question{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: bolder;
     margin: 15px;
 }
 
 .choiceList, .correctInfo, .incorrectInfo{
-    font-size: 18px;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .submit, .continue, .start{
-    font-size: 16px;
+    font-size:26px;
     border-radius: 7px;
     background: yellowgreen;
     margin-top: 10px;
@@ -66,10 +94,10 @@ div, button{
     color: red;
     font-weight: bold;
     font-style: italic;
-    font-size: 20px;
+    font-size: 40px;
 }
 .correct, .incorrect{
-    font-size: 20px;
+    font-size: 38px;
     font-weight: bold;
 }
 
@@ -78,6 +106,8 @@ footer{
     color: #ffffff;
     padding: 5px 10px;
     overflow: auto;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 @media only screen and (max-width:900px){

@@ -8,8 +8,8 @@ let currentQuestion = 0;
 let quizData = [
   {
     question:'Which grows faster. your fingernails or your toenails?',
-    answers:['Fingernails','Toenails','About the same'],
-    correctAnswer: '0',
+    answers:['Toenails','Fingernails','About the same'],
+    correctAnswer: '1',
     answerInfo:'Fingernails grow about twice as fast as toenails, at 3.47 millimeters per month compared with 1.62 millimeters per month.'
   },
   {
@@ -78,7 +78,6 @@ function displayCurrentQuestion(i) {
   //Submit Answer
   $('.submit').on('click', function(event){
     event.preventDefault();
-    console.log('sumbitted');
     
     //Error Message 
     let value = $('input[type="radio"]:checked').val();
@@ -154,13 +153,13 @@ function process(n){
   }
   if (n == total - 1){
     
-    $('#results').html(`<h3>Your final score is: ${score} out of 5</h3> <a href="index.html">Take Quiz Again</a>`);
+    $('#results').html(`<p class="final">Your final score is: ${score} out of 5</p> <a href="index.html" class="retake">Take Quiz Again</a>`);
     $('.continue').hide();
   }
   else {
-    $('#results').html(`<h3>Your score is: ${score} out of 5</h3>`);
+    $('#results').html(`<p class="currentScore">Your score is: ${score} out of 5</p>`);
   }
-  console.log(n);
+
 }
 
 //Add event listners
